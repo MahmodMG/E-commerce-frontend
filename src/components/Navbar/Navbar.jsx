@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "../../images/freshcart-logo.svg";
+import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-main-light navbar-light">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to="/">
             <img src={logo} alt="" />
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,43 +23,46 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/products">
                   Products
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/">
                   Categories
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/">
                   Brands
-                </a>
+                </NavLink>
               </li>
             </ul>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 mt-2">
-              <a type="button" className="btn mn-3 position-relative">
+              <NavLink
+                type="button"
+                className="btn border-0 mn-3 position-relative"
+              >
                 Cart <i className="fa-solid fa-cart-shopping"></i>
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
                   10
                   <span className="visually-hidden">unread messages</span>
                 </span>
-              </a>
+              </NavLink>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/">
                   Logout
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/">
                   Login
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
