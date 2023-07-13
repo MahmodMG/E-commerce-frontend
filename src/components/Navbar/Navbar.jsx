@@ -54,13 +54,18 @@ export default function Navbar() {
                   <span className="visually-hidden">unread messages</span>
                 </span>
               </NavLink>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/">
                   Logout
                 </NavLink>
+              </li> */}
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/register">
+                  Register
+                </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">
+                <NavLink className="nav-link" to="/login">
                   Login
                 </NavLink>
               </li>
